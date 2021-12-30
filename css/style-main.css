@@ -44,7 +44,7 @@ h2 {
 
 @media (min-width: 380px) {
   .main-card {
-    transform: translateX(-425px);
+    transform: translateX(-550px);
   }
 }
 
