@@ -3,4 +3,6 @@ Welcome  👋 to the Plasma Wallet project  :). This is a project focused on cre
 in your different address. This is still a work in a progress but a step forward into Web3. I attempted to use Moralis SDK as much as I could to simplify 
 the development.
 
+Live Url 👉 : https://upbeat-meitner-8035b6.netlify.app/
+
    ![alt text](https://github.com/EddyDomingo/plasma-wallet-web3/blob/master/images/SignUp.png) ![alt text](https://github.com/EddyDomingo/plasma-wallet-web3/blob/master/images/Main-View.png)
