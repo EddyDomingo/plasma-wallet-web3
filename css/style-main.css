@@ -10,7 +10,8 @@
 body {
   background-image: url("/images/backgroundSign.png");
   background-repeat: no-repeat;
-  background-size: 375px 812px;
+  /* background-size: 375px 812px; */
+  background-size: cover;
   font-family: "Poppins", sans-serif;
   color: #6e42cd;
 }
