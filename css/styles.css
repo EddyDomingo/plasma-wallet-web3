@@ -10,8 +10,8 @@
 body {
   background-image: url("/images/background.png");
   background-repeat: no-repeat;
-/*   background-size: 715px 812px; */
-  background-size: cover;
+  background-size: 715px 812px;
+/*   background-size: cover; */
   font-family: "Poppins", sans-serif;
   color: azure;
 }
