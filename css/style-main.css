@@ -1,0 +1,157 @@
+/* Universal Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/images/backgroundSign.png");
+  background-repeat: no-repeat;
+  background-size: 375px 812px;
+  font-family: "Poppins", sans-serif;
+  color: #6e42cd;
+}
+
+/* Typography */
+
+h1 {
+  margin: 5px 0 0 0;
+  text-align: center;
+}
+
+h2 {
+  margin: 8px;
+  text-align: center;
+}
+
+/* Layout-Cards */
+
+.main-card {
+  width: 330px;
+  height: 650px;
+  max-width: 812px;
+  background: azure;
+  margin: 90px auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -webkit-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -moz-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+}
+
+@media (min-width: 380px) {
+  .main-card {
+    transform: translateX(-425px);
+  }
+}
+
+.sign-up-title {
+  padding: 10px;
+}
+
+/* Form Design */
+
+.wallet-form {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+#w3review,
+#userName,
+#passWord {
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid #6e42cd;
+  background: none;
+  color: #6e42cd;
+}
+
+#w3review {
+  color: black;
+}
+
+#w3review {
+  padding: 3px 2px;
+}
+
+#userName,
+#passWord {
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.userLabel,
+.passLabel {
+  position: absolute;
+  left: 50px;
+  font-family: inherit;
+  font-size: 0.75rem;
+  cursor: text;
+  background: azure;
+}
+
+.userLabel {
+  transform: translateY(-5px);
+}
+
+.passLabel {
+  transform: translateY(53px);
+}
+
+userLabel:focus,
+.userLabel:active,
+.passLabel:focus,
+.passLabel:active {
+  font-size: 0.5rem;
+}
+
+.avatar-container {
+  margin: 15px auto;
+}
+
+/* Buttons Design */
+
+.btn {
+  text-decoration: none;
+  padding: 2px;
+  margin: 10px;
+  transform: translateX(40px);
+  background: linear-gradient(
+    180deg,
+    #6e42cd 0%,
+    rgba(106, 73, 176, 0.62) 100%
+  );
+  color: azure;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -webkit-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -moz-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  transform: scale(1.1);
+}
+
+/* Image Design */
+
+.gorilla {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.gorilla:hover,
+.gorilla:focus,
+.gorilla:active {
+  transform: scale(1.1);
+  background-color: #afb1b3;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Plasma Wallet</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Poppins&display=swap" rel="stylesheet"> 
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    </head>
+    <body>
+        <section class="your-wallets" id="your-wallets">
+            <!-- hamburger menu -->
+            <input id="checkbox" type="checkbox" />
+            <span class="menu-lines"></span>
+            <span class="menu-lines"></span>
+            <span class="menu-lines"></span>
+            
+            <div class="total-balance">
+                <h2 class="total-balance-text" id="totalHoldings">
+                    
+                </h2>
+                <img src="images/pie-chart.png" class="circle-graph" alt="Portfolio Icon">
+            </div>
+
+            <div class="wallet-addresses-card">
+            <div class="your-wallet-lines">
+                <hr>
+                <p class="your-holding-text">Your Holdings</p>
+                <hr>
+
+                <!-- card section option and address #1 -->
+                <div class=card-address-option id="card-address-option-btc">
+                    <p class="crypto-address" id="crypto-address">
+                        0xa01468628D1b08078E0619876007A1D7A23A49e7
+                    </p>
+                    <a href="#" class="doneLink" id="doneLink-btc">Done</a>
+                    <img src="images/copy.png" class="copy-logo" alt="Copy Logo" id="copy-logo">
+                </div>
+                <div class="card-address" id="card-address-btc">
+                    <img src="images/token-logos/bitcoin.png" class="token-logo" alt="BTC">
+                    <p class="addressNumber" id="addressNumber">0.32</p>
+                    <p class="amount-dollars" id="amount-dollars-btc"> </p>
+                </div>
+
+                <!-- card section option and address #2-->
+                <div class=card-address-option id="card-address-option-eth">
+                    <p class="crypto-address" id="crypto-address">
+                        0xa01468628D1b08078E0619876007A1D7A23A49e7
+                    </p>
+                    <a href="#" class="doneLink" id="doneLink-eth">Done</a>
+                    <img src="images/copy.png" class="copy-logo" alt="Copy Logo" id="copy-logoEth">
+                </div>
+                <div class="card-address" id="card-address-eth">
+                    <img src="images/token-logos/ethereum.png" class="token-logo" alt="ETH">
+                    <p class="addressNumber" id="addressNumber">3.4567</p>
+                    <p class="amount-dollars" id="amount-dollars-eth"> $24,000</p>
+                </div>
+
+                <!-- card section option and address #3-->
+                <div class=card-address-option id="card-address-option-bnb">
+                    <p class="crypto-address">
+                        0xa01468628D1b08078E0619876007A1D7A23A49e7
+                    </p>
+                    <a href="#" class="doneLink" id="doneLink-bnb">Done</a>
+                    <img src="images/copy.png" class="copy-logo" alt="Copy Logo" id="copy-logoBnb">
+                </div>
+                <div class="card-address" id="card-address-bnb">
+                    <img src="images/token-logos/binance.png" class="token-logo" alt="BNB">
+                    <p class="addressNumber" id="addressNumber">10.6767</p>
+                    <p class="amount-dollars" id="amount-dollars-bnb"> </p>
+                </div>
+
+                <!-- card section option and address #4 -->
+                <div class=card-address-option id="card-address-option-sol">
+                    <p class="crypto-address">
+                        0xa01468628D1b08078E0619876007A1D7A23A49e7
+                    </p>
+                    <a href="#" class="doneLink" id="doneLink-avax">Done</a>
+                    <img src="images/copy.png" class="copy-logo" alt="Copy Logo" id="copy-logoAvax">
+                </div>
+                <div class="card-address" id="card-address-sol">
+                    <img src="images/token-logos/avalanche.png" class="token-logo" alt="SOL">
+                    <p class="addressNumber" id="addressNumber">7.8731</p>
+                    <p class="amount-dollars" id="amount-dollars-avax"> </p>
+                </div>
+                
+            </div>
+            </div>
+        </section>
+        <!-- Exchange Section after clicking button -->
+        <section class="your-exchange" id="your-exchange">
+            <!-- hamburger menu and checkbox -->
+            <input id="checkbox2" type="checkbox" />
+            <span class="menu-lines"></span>
+            <span class="menu-lines"></span>
+            <span class="menu-lines"></span>
+
+            <div class="exchange-header">
+                <h2>Your Exchange</h2>
+                <img src="images/exchange2.png" class="circle-graph" alt="Exchange Icon">
+            </div>
+
+            <div class="token-modal-wrapper" id="token-modal-wrapper">
+                <div class="token-modal-content">
+                    <span class="close-btn">&times;</span>
+                    <p class="modal-items">
+                        <img src="images/token-logos/bitcoin.png" class="token-logo" alt="Token Logo">
+                        <i class="modal-token-name">Bitcoin</i>
+                    </p>
+                    <p class="modal-items">
+                        <img src="images/token-logos/binance.png" class="token-logo" alt="Token Logo">
+                        <i class="modal-token-name">Binance</i>
+                    
+                    </p>
+                    <p class="modal-items">
+                        <img src="images/token-logos/avalanche.png" class="token-logo" alt="Token Logo">
+                        <i class="modal-token-name">Avalanche</i>
+                    
+                    </p>
+                    <p class="modal-items">
+                        <img src="images/token-logos/ethereum.png" class="token-logo" alt="Token Logo">
+                        <i class="modal-token-name">
+                            Ethereum
+                        </i>
+                    
+                    </p>
+                </div>
+            </div>
+
+            <div class="exchange-card">
+                <div class=exchange-option>
+                    <!-- <p>From token</p> -->
+                    <a href="#" class="from-token" id="from-token">
+                        <img src="images/token-logos/bitcoin.png" class="token-logo-small" alt="Token">
+                        <p id="from-exchange-text">Bitcoin
+                            <i class="arrow down"></i>
+                        </p>
+                        <div class="input-wrapper">
+                            <input type="text" class="token-amount-input" id="token-amount-input" value="0.00">
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class=exchange-option>
+                    <!-- <p>To token</p> -->
+                    <a href="#" class="to-token" id="to-token">
+                        <img src="images/token-logos/ethereum.png" class="token-logo-small" alt="Token">
+                        <p id="from-exchange-text">Ethereum
+                            <i class="arrow down"></i>
+                        </p>
+                        <div class="input-wrapper">
+                            <input type="text" class="token-amount-input" id="token-amount-input" value="0.00">
+                        </div>
+                    </a>
+                    
+                    
+                </div>
+
+                <a href="#" class="swap-btn" id="swap-btn">
+                    swap
+                </a>
+                
+            </div>
+            <!-- Main section of the wallet App -->
+        </section>
+
+        <main class="main-section" id="main-section">
+        <img src="images/gorillaAvatars/greenGorilla.png" class="avatar" alt="Avatar">
+        <header>
+            <h1>Hi, Eddy</h1>
+        </header>
+        <p>
+            What would you like to work with?
+        </p>
+
+        <!-- Button section on main page -->
+        <section class="wallet-options">
+            <a href="#" class="btn sky" id="wallet-btn">
+                <img src="/images/money.png" class="wallet-option-icon" alt="Wallet Icon">
+                <span class="wallet-option-text">Wallets</span>
+                You can start to use your wallet
+            </a>
+            <a href="#" class="btn orange" id="exchange-btn">
+                <img src="/images/exchange.png" class="wallet-option-icon" alt="Exchange Icon">
+                <span class="wallet-option-text">Exchange</span>
+                You can start to use our Exchange
+            </a>
+        </section>
+
+        <!-- Price section on main page -->
+        <section class="price-section">
+                <div class="token-price">
+                    <img src="images/token-logos/bitcoin.png" class="token-logo" alt="BTC">
+                    <p class="token-price-text btc-price" id="token-price-BTC">
+                        Getting price...
+                    </p>
+                    <img src="images/graph/growth.png" class="graph-logo" alt="Growth">
+                </div>
+                <hr>
+
+                <div class="token-price">
+                    <img src="images/token-logos/ethereum.png" class="token-logo" alt="ETH">
+                    <p class="token-price-text eth-price" id="token-price-ETH">
+                        Getting price...
+                    </p>
+                    <img src="images/graph/growth.png" class="graph-logo" alt="Growth">
+                </div>
+                <hr>
+
+                <div class="token-price">
+                    <img src="images/token-logos/binance.png" class="token-logo" alt="BNB">
+                    <p class="token-price-text bnb-price" id="token-price-BNB">
+                        Getting price...
+                    </p>
+                    <img src="images/graph/loss.png" class="graph-logo" alt="Loss">
+                </div>
+                <hr>
+
+                <div class="token-price">
+                    <img src="images/token-logos/avalanche.png" class="token-logo" alt="SOL">
+                    <p class="token-price-text avax-price" id="token-price-AVAX">
+                        Getting price...
+                    </p>
+                    <img src="images/graph/loss.png" class="graph-logo" alt="Loss">
+                </div>
+
+
+
+        </section>
+    </main>
+
+
+        <script src="js/scripts.js"></script>
+        <script src="js/moralisPriceFeeds.js"></script>
+    </body>
+</html>

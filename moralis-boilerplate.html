@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vanilla Boilerplate</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+
+    <style>
+      .image-container{
+        width:60%;
+        border: solid magenta 1px;
+        padding: 5px;
+        margin: 30px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      img{
+        width:80px;
+      }
+      img:hover,
+      img:focus,
+      img:active{
+        background-color: blue;
+        border-radius: 20px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <input type="email" name="" id="email" placeholder="email">
+    <input type="password" name="" id="password" placeholder="password">
+  
+    <button id="signup">Moralis Sign up</button>
+    <button id="btn-login">Moralis Metamask Login</button>
+    <button id="btn-logout">Logout</button>
+    <button id="get-user">Get User</button>
+
+    <!-- <p id="demo"></p> -->
+
+    <div class="image-container" id="avatarContainer">
+      <img src="images/gorillaAvatars/brownGorilla.png" id="brownGorilla">
+      <img src="images/gorillaAvatars/gorilla.png" id="Gorilla">
+      <img src="images/gorillaAvatars/greenGorilla.png" id="greenGorilla">
+      <img src="images/gorillaAvatars/kidGorilla.png" id="kidGorilla">
+      <img src="images/gorillaAvatars/surpriseGorilla.png" id="surpriseGorilla">
+
+    </div>
+    <script type="text/javascript" src="./js/moralisUser.js"></script>
+    <script type="text/javascript" src="./js/moralisQuery.js"></script>
+  </body>
+</html>

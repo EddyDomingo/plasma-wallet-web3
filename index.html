@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style-main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Poppins&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    
+    <title>Plasma Wallet Sign Up</title>
+</head>
+<body>
+    
+    <main class="main-card">
+        <div class="sign-up-title">
+            <h1>
+                Create Wallet
+            </h1>
+            <!-- <hr> -->
+        </div>
+
+        <div class="wallet-form">
+                
+                <input type="text"  id="userName" placeholder=" " name="user" required>
+                <label for="userName" class="userLabel">Username</label>
+
+                <input type="text"  id="passWord" placeholder=" " name="pass" required>
+                <label for="passWord" class="passLabel">Password</label>
+
+                <h2>Your seed phrase</h2>
+                <textarea id="w3review" name="w3review" rows="4" cols="20">
+                Seed Phrase
+                </textarea>
+                <a href="#" class="btn" id="generateSP">Generate Phrase</a>
+
+                <h2>Choose your Avatar</h2>
+                <div class="avatar-container" id="avatar-container">
+                    <img src="./images//gorillaAvatars/brownGorilla.png" alt="Avatar" class="gorilla" id="0"> 
+                    <img src="./images/gorillaAvatars/gorilla.png" alt="Avatar" class="gorilla" id="1"> 
+                    <img src="./images/gorillaAvatars/greenGorilla.png" alt="Avatar" class="gorilla" id="2"> 
+                    <img src="./images/gorillaAvatars/kidGorilla.png" alt="Avatar" class="gorilla" id="3"> 
+                    <img src="./images/gorillaAvatars/surpriseGorilla.png" alt="Avatar" class="gorilla" id="4"> 
+
+                </div>
+
+                <a href="#" class="btn" id="signup">Create Wallet</a>
+
+        </div>
+
+        <script src="js/signUp.js"></script>
+        <script src="dist/bundle.js"></script>
+    </main>
+
+
+
+
+</body>
+</html>

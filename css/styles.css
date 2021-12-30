@@ -1,0 +1,523 @@
+/* Universal Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/images/background.png");
+  background-repeat: no-repeat;
+  background-size: 715px 812px;
+  font-family: "Poppins", sans-serif;
+  color: azure;
+}
+
+/* Wallet Square 
+background-color: #4bd2ee;
+background-image: linear-gradient(160deg, #4bd2ee 0%, #368df6 50%, #2a71fb 100%); */
+
+/* Background color
+
+/* background: linear-gradient(180deg, #6E42CD 0%, rgba(106, 73, 176, 0.62) 100%); */
+
+/* Exchange color 
+background-color: #4735a4;
+background-image: linear-gradient(62deg, #4735a4 0%, #4a31a6 50%, #9990b9 100%); */
+
+/* Typography Styles */
+
+.wallet-option-text {
+  display: block;
+  font-size: 18px;
+  margin: 30px 0 0 0;
+}
+
+.token-price-text {
+  display: inline;
+  font-size: 18px;
+}
+.btc-price::before {
+  content: "Bitcoin";
+  font-size: 8px;
+  display: block;
+  text-align: left;
+}
+
+.eth-price::before {
+  content: "Ethereum";
+  font-size: 8px;
+  display: block;
+  text-align: left;
+}
+
+.bnb-price::before {
+  content: "Binance";
+  font-size: 8px;
+  display: block;
+  text-align: left;
+}
+.avax-price::before {
+  content: "Avalanche";
+  font-size: 8px;
+  display: block;
+  text-align: left;
+}
+
+#from-exchange-text {
+  margin: 0 15px 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  transform: translateY(-5px);
+}
+
+.from-token::before {
+  content: "From Token:";
+  font-size: 8px;
+  display: block;
+  margin: 0 0 0 36px;
+}
+
+.to-token::before {
+  content: "To Token:";
+  font-size: 8px;
+  display: block;
+  text-align: left;
+  margin: 0 0 0 36px;
+}
+
+h2 {
+  font-size: 30px;
+  /* display: inline-block; */
+}
+
+.your-holding-text {
+  text-transform: uppercase;
+}
+
+.total-balance-text::before {
+  content: "Total Balance";
+  font-size: 12px;
+  display: block;
+  text-align: left;
+}
+
+.crypto-address {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.doneLink {
+  font-size: 8px;
+  display: block;
+  text-align: center;
+  margin: 5px 0 0 0;
+  text-decoration: underline;
+  color: #6e42cd;
+  transform: translateX(-120px) translateY(17px);
+}
+
+/* Layout Styles */
+
+.main-section {
+  transform: translateY(90px);
+  padding: 20px;
+  max-width: 812px;
+  display: block; /* need too change this with javascript */
+}
+
+.your-wallets {
+  position: absolute;
+  transform: translateY(90px);
+  padding: 20px;
+  max-width: 812px;
+  display: none;
+}
+
+.your-exchange {
+  display: none;
+  position: absolute;
+  transform: translateY(90px);
+  padding: 20px;
+}
+
+.wallet-options {
+  margin: 20px 0;
+}
+
+.price-section {
+  margin: 40px 0 0 0;
+}
+
+.token-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 300px;
+}
+
+.your-wallet-lines {
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  transform: translateX(200px) translateY(-50px);
+}
+
+/* Images also Arrow also Input*/
+
+.avatar,
+.wallet-option-icon,
+.circle-graph {
+  width: 50px;
+  height: 50px;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin: 0 0 15px 0;
+}
+
+.wallet-option-icon {
+  display: block;
+  margin: 10px;
+}
+
+.token-logo,
+.graph-logo {
+  display: inline;
+  width: 40px;
+  height: 40px;
+}
+
+.token-logo-small {
+  display: inline;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  transform: translateY(-5px);
+}
+
+.copy-logo {
+  display: inline;
+  width: 25px;
+  height: 25px;
+  transform: translateX(-6px);
+}
+
+.arrow {
+  border: solid azure;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin: 0 0 4px 6px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+/* Cards Design */
+
+.total-balance,
+.exchange-header {
+  width: 330px;
+  height: 50px;
+  margin: 50px 0 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exchange-card {
+  width: 335px;
+  height: 520px;
+  border-radius: 10px;
+  background: azure;
+  color: black;
+  padding: 5px;
+}
+
+.wallet-addresses-card {
+  width: 335px;
+  height: 520px;
+  border-radius: 10px;
+  background: azure;
+  color: black;
+}
+
+.card-address {
+  display: flex;
+  /* display: none; */
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  width: 310px;
+  height: 80px;
+  background: azure;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -webkit-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -moz-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+}
+
+.card-address:hover,
+.card-address:focus,
+.card-address:active {
+  transform: scale(1.1);
+}
+
+.card-address-option {
+  /* display: flex; */
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  width: 310px;
+  height: 80px;
+  background: azure;
+  margin: 20px auto;
+  padding: 13px;
+  border-radius: 10px;
+  box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -webkit-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -moz-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+}
+
+.card-address-option:hover,
+.card-address-option:focus,
+.card-address-option:active {
+  transform: scale(1.1);
+}
+
+.exchange-option {
+  display: flex;
+  /* display: none; */
+  align-items: center;
+  justify-content: left;
+  cursor: pointer;
+  width: 320px;
+  height: 80px;
+  background: azure;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -webkit-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -moz-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+}
+
+.your-wallet-lines:hover .card-address {
+  color: gray;
+}
+
+/* Links and Buttons Styles also Line also hamburger menu*/
+
+.swap-btn {
+  display: inline-block;
+  padding: 10px 50px;
+  margin: auto 100px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 10px;
+  color: azure;
+  background: linear-gradient(
+    180deg,
+    #6e42cd 0%,
+    rgba(106, 73, 176, 0.62) 100%
+  );
+  box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -webkit-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -moz-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 10px;
+  color: azure;
+  width: 150px;
+  height: 189px;
+  border-radius: 10%;
+  box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -webkit-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -moz-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.swap-btn:hover,
+.swap-btn:active,
+.swap-btn:focus {
+  transform: scale(1.1);
+}
+
+.sky {
+  /* background: #4bd2ee; */
+  background-image: linear-gradient(
+    160deg,
+    #4bd2ee 0%,
+    #368df6 50%,
+    #2a71fb 100%
+  );
+  margin: 0 12px 0 0;
+}
+
+.orange {
+  /* background: #f87f00; */
+  background-image: linear-gradient(
+    160deg,
+    #f87f00 0%,
+    #f98800 50%,
+    #faa233 100%
+  );
+}
+
+hr {
+  display: block;
+  height: 1px;
+  width: 95%;
+  border: 0;
+  border-top: 1px solid rgb(169, 155, 204);
+  margin: 14px 0;
+  padding: 0;
+  max-width: 300px;
+}
+
+.your-wallet-lines hr {
+  width: 80%;
+  margin: 15px auto;
+}
+
+.your-wallets span,
+.your-exchange span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: azure;
+  border-radius: 3px;
+}
+
+/* .your-exchange input */
+.your-wallets input,
+#checkbox2 {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+.input-wrapper input {
+  display: inline-block;
+  font-size: 18px;
+  text-align: center;
+  width: 80px;
+  height: 50px;
+  border: none;
+  background-color: azure;
+  padding: 0 2px;
+  border-radius: 10%;
+  box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -webkit-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -moz-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+}
+
+.from-token,
+.to-token {
+  width: 180px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  background: linear-gradient(
+    180deg,
+    #6e42cd 0%,
+    rgba(106, 73, 176, 0.62) 100%
+  );
+  color: azure;
+  padding: 5px 10px;
+  box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -webkit-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+  -moz-box-shadow: 11px 10px 21px -1px rgba(41, 40, 40, 0.65);
+}
+
+/* Modal Design and Input */
+
+.token-modal-wrapper {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 89.2%;
+  height: 520px;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.token-modal-content {
+  background-color: azure;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  transform: translateX(0px) translateY(0px);
+  text-align: left;
+  width: 90%;
+  border-radius: 10px;
+  color: black;
+  font-size: 18px;
+}
+
+.modal-items {
+  cursor: pointer;
+}
+
+.modal-items:hover,
+.modal-items:focus {
+  background-color: grey;
+}
+
+.modal-token-name {
+  position: absolute;
+  transform: translateX(10px) translateY(5px);
+  font-style: normal;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
