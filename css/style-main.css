@@ -119,7 +119,7 @@ userLabel:focus,
 .btn {
   text-decoration: none;
   padding: 2px;
-  margin: 10px;
+  margin: 6px;
   transform: translateX(40px);
   background: linear-gradient(
     180deg,

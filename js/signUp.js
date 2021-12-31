@@ -20,11 +20,11 @@ document.querySelector("#avatar-container").addEventListener("click", e =>{
 })
 
 signup = async (username, password) => {
-  const btcAddress = "0xa01468628D1b08078E0619876007A1D7A23A49e7";
+  const btcAddress = "1AEEs9nqNrNLy3VSBAUtZXnisMuYPBJrWy";
   const ethAddress = "0xa01468628D1b08078E0619876007A1D7A23A49e7";
-  const bnbAddress = "0xa01468628D1b08078E0619876007A1D7A23A49e7";
-  const avaxAddress = "0xa01468628D1b08078E0619876007A1D7A23A49e7";
-  const AvatarLocation = avatars[avatar];
+  const bnbAddress = "tbnb1g54hfdtkrr3awrez6zjcw74l8rpq2yj8j996ma";
+  const avaxAddress = "X-local1w6dwjrshqldqf0adzdjxjtuc6a36a3j2zx5w9r";
+  const AvatarLocation = avatars[window.avatar];
   const user = new Moralis.User();
   user.set("username", username);
   user.set("password", password);
@@ -36,17 +36,33 @@ signup = async (username, password) => {
 
   try {
       await user.signUp();
+      localStorage.setItem("TheUser", document.getElementById("userName").value);
+      localStorage.setItem("TheAvatar", avatars[window.avatar]);
       console.log(user)
       console.log(user.get('ethAddress'))
+      console.log(localStorage.getItem("TheAvatar"));
   } catch (error) {
       alert("Error: " + error.code + " " + error.message);
   }
 }
 
+signIn = async (username, password) => {
+  try {
+    const user = await Moralis.User.logIn(username, password)
+    localStorage.setItem("TheUser", document.getElementById("userName").value);
+    localStorage.setItem("TheAvatar", avatars[window.avatar]);
+      console.log(user)
+      console.log(user.get('ethAddress'))
+      console.log(localStorage.getItem("TheUser"));
+      console.log(localStorage.getItem("TheAvatar"));
+  } catch (error) {
+      alert("Error: " + error.code + " " + error.message);
+  }
+}
+
+
 document.getElementById("signup").onclick = () => signup(document.getElementById("userName").value, document.getElementById("passWord").value);
-
-
-
+document.getElementById("signIn").onclick = () => signIn(document.getElementById("userName").value, document.getElementById("passWord").value);
 
 // Generate phrase code
 

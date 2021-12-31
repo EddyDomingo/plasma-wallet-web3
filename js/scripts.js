@@ -1,5 +1,8 @@
 console.log("hello world")
 
+document.getElementById("UserName").innerHTML = localStorage.getItem("TheUser");
+document.getElementById("myImg").src = localStorage.getItem("TheAvatar");
+
 // Wallet button to navigate to wallet section of the app //
 var x = document.getElementById('wallet-btn');
 x.addEventListener("click", displayChange);
